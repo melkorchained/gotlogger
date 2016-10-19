@@ -1,7 +1,7 @@
 land = {'Castle Black':{'Power':1},
 		'Karhold':{'Power:1'},
 		'The Stony Shore':{'Supply:1'},
-		'White Harbor':{'Castle':True, 'Port': True}
+		'White Harbor':{'Castle':True, 'Port': True},
 		'Widow\'s Watch':{'Supply':1},
 		'Winterfell':{'Stronghold':True, 'Power':1, 'Supply':1, 'Garrison':True, 'Port': True},
 		'Moat Cailin':{'Castle':True},
@@ -13,7 +13,7 @@ land = {'Castle Black':{'Power':1},
 		'The Mountains of the Moon':{'Supply':1},
 		'The Eyrie':{'Power':1,'Castle':True,'Supply':1},
 		'Riverrun':{'Stronghold':True,'Power':1,'Supply':1},
-		'Lannisport':{'Stronghold':True, 'Garrison':True,'Supply':2, 'Port': True}
+		'Lannisport':{'Stronghold':True, 'Garrison':True,'Supply':2, 'Port': True},
 		'Stoney Sept':{'Power':1},
 		'Harrenhal':{'Castle':True,'Power':1},
 		'Cracklaw Point':{'Castle':True},
