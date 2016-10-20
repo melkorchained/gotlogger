@@ -21,6 +21,10 @@ class Territory(object):
 	'''
 
 	current_owner = ""
+	if self.garrison:
+		garrison_strength = 2
+	else:
+		garrison_strength = 0
 	def __init__(self, castle, stronghold, power, supply, port, garrison, terrain):
 		self.castle = castle
 		self.stronghold = stronghold
@@ -67,8 +71,3 @@ class Territory(object):
 	def muster_units(self, muster_call):
 		pass
 
-class Winterfell(Territory):
-
-	def __init__(self):
-		Territory.__init__(self, False, True, 1, 1, True, True)
-		self.garrison_strength = 2
