@@ -69,8 +69,8 @@ class Territory(object):
 	def supporting_units(self):
 		pass
 
-	def order_token(self):
-		pass
+	def order_token(self, token, strength, star):
+		return (token, strength, star)
 
 	@staticmethod
 	def mustering_strength():
