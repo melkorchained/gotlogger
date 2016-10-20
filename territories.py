@@ -35,6 +35,10 @@ class Territory(object):
 		self.adjacent_sea = []
 		self.adjacent_land = []
 		self.terrain = terrain		#can be land or sea
+		self.footman = 0
+		self.knight = 0
+		self.siege = 0
+		self.ship = 0
 
 	def current_strength(self, combat_status, order, enemy):
 		units = self.current_units()
