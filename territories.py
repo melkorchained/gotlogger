@@ -51,7 +51,9 @@ class Territory(object):
 				strength += units[2]*4
 			if self.order_token()[0] == "March":
 				strength += self.order_token()[1]
-		#COMPLETE DEFENSIVE STRENGTH
+		elif combat_status == "Defending":
+			if self.order_token()[0] == "Defend":
+				strength += self.order_token()[1]
 		return strength
 
 	def add_units(self, footman, knight, siege, ship):
