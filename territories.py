@@ -41,6 +41,7 @@ class Territory(object):
 	def order_token(self):
 		pass
 
+	@staticmethod
 	def mustering_strength():
 		if self.castle:
 			return 1
@@ -50,6 +51,9 @@ class Territory(object):
 			return 0
 
 	def muster_units(self, muster_call):
+		pass
+
+	def current_owner(self):
 		pass
 
 class Winterfell(Territory):
