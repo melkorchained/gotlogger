@@ -13,13 +13,15 @@ class Territory(object):
 
 	current_strength: Returns the combat strength of the territory
 
-	current_units: Returns all units in the territory
+	current_units: Returns all units in the territory as a tuple
 
 	supporting_units: returns all units supporting this territory
 
-	order_token: returns the order token placed on the territory
+	order_token: returns the order token placed on the territory as a string, int tuple
 	'''
-	def __init__(self, castle, stronghold, power, supply, port, garrison):
+
+	current_owner = ""
+	def __init__(self, castle, stronghold, power, supply, port, garrison, terrain):
 		self.castle = castle
 		self.stronghold = stronghold
 		self.power = power
@@ -28,9 +30,21 @@ class Territory(object):
 		self.garrison = garrison
 		self.adjacent_sea = []
 		self.adjacent_land = []
+		self.terrain = terrain		#can be land or sea
 
-	def current_strength(self, combat_status, order):
-		pass
+	def current_strength(self, combat_status, order, enemy):
+		units = self.current_units()
+		if self.terrain == "Land":
+			strength = (units[0]*1)+(units[1]*2)
+		elif self.terrain == "Sea":
+			strength = units[3]*1
+		if combat_status == "Attacking":
+			if enemy.castle or enemy.stronghold:
+				strength += units[2]*4
+			if self.order_token()[0] == "March":
+				strength += self.order_token()[1]
+		#COMPLETE DEFENSIVE STRENGTH
+		return strength
 
 	def current_units(self):
 		pass
@@ -51,9 +65,6 @@ class Territory(object):
 			return 0
 
 	def muster_units(self, muster_call):
-		pass
-
-	def current_owner(self):
 		pass
 
 class Winterfell(Territory):
