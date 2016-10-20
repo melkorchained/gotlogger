@@ -50,8 +50,15 @@ class Territory(object):
 		#COMPLETE DEFENSIVE STRENGTH
 		return strength
 
+	def add_units(self, footman, knight, siege, ship):
+		self.footman += footman
+		self.knight += knight
+		self.siege += siege
+		self.ship += ship
+
 	def current_units(self):
-		pass
+		units = {'Footman': self.footman, 'Knight': self.knight,'Siege': self.siege, 'Ship': self.siege}
+		return units
 
 	def supporting_units(self):
 		pass
