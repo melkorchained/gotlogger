@@ -67,10 +67,14 @@ class Territory(object):
 		return units
 
 	def supporting_units(self):
+		'''
+		Check surrounding territories' current_units
+		Return strength if order_token[0] == "Support"
+		'''
 		pass
 
 	def order_token(self, token, strength, star):
-		return (token, strength, star)
+		return (token, strength, star)            #String, Int, Bool
 
 	@staticmethod
 	def mustering_strength():
